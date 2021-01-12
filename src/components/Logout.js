@@ -17,4 +17,4 @@ const Logout = ({ logout, history }) => {
   )
 }
 
-export default withRouter(connect(null, { logout } )(Logout))
+export default connect(null, { logout } )(Logout)
