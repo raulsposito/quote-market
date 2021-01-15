@@ -1,22 +1,15 @@
 import React from 'react';
+import Login from './Login'
+import Signup from './Signup'
+import { Link } from 'react-router-dom'
+
 
 const Home = () => {
     return (
-        <div className="home">
-            <div class="row">
-                <div class="column">
-                    <h1>I need a Hero!</h1>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="column">
-                    <h1>I'm Hero material!</h1>
-                </div>
-            </div>
+        <div>
+            <h3>Please <Link to="/signup">Sign Up</Link> or <Link to="/login">Log In</Link></h3>
         </div>
-
-    );
+    )
 };
 
 export default Home

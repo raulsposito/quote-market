@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
+import NavBar from "./components/NavBar";
+import Home from './components/Home.js'
+import Signup from './components/Signup.js'
+import Login from './components/Login'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 import { Route, Switch, withRouter } from 'react-router-dom';
-import NavBar from "./components/NavBar";
-import Signup from './components/Signup.js'
-import Login from './components/Login'
-import Home from './components/Home.js'
 
 class App extends React.Component {
 
@@ -15,11 +15,12 @@ class App extends React.Component {
   }
   
   render(){
+    const { loggedIn } = this.props
     return (
       <div className="App">
-        <NavBar />,
-        <Home />
+        <NavBar />
         <Switch>
+          <Route exact path='/' component={Home}/>
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/login' component={Login}/>
         </Switch>
@@ -31,7 +32,7 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    currentUser: state
+    loggedIn: !!state.currentUser
   }
 }
 

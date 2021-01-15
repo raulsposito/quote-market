@@ -16,7 +16,7 @@ export const clearCurrentUser = () => {
 
 // Async
 
-export const login = (credentials) => {
+export const login = (credentials, history) => {
     return dispatch => {
         return fetch("http://localhost:3000/api/v1/login", {
             credentials: "include",
@@ -32,7 +32,9 @@ export const login = (credentials) => {
             if (user.error) {
                 alert(user.error)
             } else {
-                dispatch({type: 'SET_CURRENT_USER', payload: user })
+              dispatch(setCurrentUser(response.data))
+              dispatch(resetLoginForm())
+              history.push('/')
             }
         })
         .catch(console.log)
