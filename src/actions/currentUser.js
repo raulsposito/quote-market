@@ -1,13 +1,6 @@
 import { resetLoginForm } from "./loginForm"
 import { resetSignupForm } from "./signupForm.js"
 
-// export const setCurrentUser = user => {
-//     return {
-//         type: "SET_CURRENT_USER",
-//         payload: user
-//     }
-// }
-
 export const setCurrentUser = user => {
   return {
     type: "SET_CURRENT_USER",
@@ -101,7 +94,6 @@ export const getCurrentUser = () => {
             alert(response.error)
           } else {
             dispatch(setCurrentUser(response.data))
-            dispatch(resetLoginForm())
           }
         })
         .catch(console.log)
