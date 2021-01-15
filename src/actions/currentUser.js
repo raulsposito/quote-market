@@ -1,9 +1,12 @@
-export const setCurrentUser = user => {
-    return {
-        type: "SET_CURRENT_USER",
-        payload: user
-    }
-}
+import { resetLoginForm } from "./loginForm"
+import { resetSignupForm } from "./signupForm.js"
+
+// export const setCurrentUser = user => {
+//     return {
+//         type: "SET_CURRENT_USER",
+//         payload: user
+//     }
+// }
 
 export const clearCurrentUser = () => {
   return {
@@ -25,15 +28,44 @@ export const login = (credentials) => {
         })
         .then(r => r.json())
         .then(user => {
+            //debugger
             if (user.error) {
                 alert(user.error)
             } else {
-                dispatch(setCurrentUser(user))
+                dispatch({type: 'SET_CURRENT_USER', payload: user })
             }
         })
         .catch(console.log)
     }
 }
+
+export const signup = (credentials, history) => {
+  return dispatch => {
+    const userInfo = {
+      user: credentials
+    }
+    return fetch("http://localhost:3001/api/v1/signup", {
+      credentials: "include",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(userInfo)
+    })
+      .then(r => r.json())
+      .then(response => {
+        if (response.error) {
+          alert(response.error)
+        } else {
+          dispatch(setCurrentUser(response.data))
+          dispatch(resetSignupForm())
+          history.push('/')
+        }
+      })
+      .catch(console.log)
+  }
+}
+
 
 export const logout = event => {
   return dispatch => {
@@ -60,6 +92,7 @@ export const getCurrentUser = () => {
             alert(response.error)
           } else {
             dispatch(setCurrentUser(response.data))
+            dispatch(resetLoginForm())
           }
         })
         .catch(console.log)
