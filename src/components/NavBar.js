@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-const NavBar = ({ currentUser }) => {
+const NavBar = () => {
     return (
         <div>
             <h2>Welcome to General Services!</h2>

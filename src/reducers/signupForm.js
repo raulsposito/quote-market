@@ -1,10 +1,7 @@
 const initialState = {
     name: "",
     password: "",
-    pic_url: "",
-    market: {
-      name: ""
-    }
+    pic_url: ""
 }
   
   export default (state=initialState, action) => {

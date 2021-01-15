@@ -8,6 +8,13 @@ import { resetSignupForm } from "./signupForm.js"
 //     }
 // }
 
+export const setCurrentUser = user => {
+  return {
+    type: "SET_CURRENT_USER",
+    user
+  }
+}
+
 export const clearCurrentUser = () => {
   return {
     type: "CLEAR_CURRENT_USER"
@@ -32,7 +39,7 @@ export const login = (credentials, history) => {
             if (user.error) {
                 alert(user.error)
             } else {
-              dispatch(setCurrentUser(response.data))
+              dispatch(setCurrentUser(user.data))
               dispatch(resetLoginForm())
               history.push('/')
             }
@@ -46,7 +53,7 @@ export const signup = (credentials, history) => {
     const userInfo = {
       user: credentials
     }
-    return fetch("http://localhost:3001/api/v1/signup", {
+    return fetch("http://localhost:3000/api/v1/signup", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -72,7 +79,7 @@ export const signup = (credentials, history) => {
 export const logout = event => {
   return dispatch => {
     dispatch(clearCurrentUser())
-    return fetch('http://localhost:3001/api/v1/logout', {
+    return fetch('http://localhost:3000/api/v1/logout', {
       credentials: "include",
       method: "DELETE"
     })
