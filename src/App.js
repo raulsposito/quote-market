@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavBar from "./components/NavBar";
+import Header from "./components/Header"
 import Home from './components/Home.js'
 import Signup from './components/Signup.js'
 import Login from './components/Login'
@@ -18,7 +19,8 @@ class App extends React.Component {
     const { loggedIn } = this.props
     return (
       <div className="App">
-        <NavBar />
+        <NavBar />,
+        <Header />
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route exact path='/signup' component={Signup}/>

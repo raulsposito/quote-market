@@ -1,12 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Login from './Login.js'
-import Logout from './Logout'
 
 const NavBar = ({ currentUser }) => {
     return (
         <div>
-            Welcome to Quote Market!
+            <h2>Welcome to General Services!</h2>
         </div>
     )
 }
