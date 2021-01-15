@@ -1,17 +1,29 @@
 import React from 'react';
 import './App.css';
-import NavBar from "./components/NavBar";
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
+import { Route, Switch, withRouter } from 'react-router-dom';
+import NavBar from "./components/NavBar";
+import Signup from './components/Signup.js'
+import Login from './components/Login'
+import Home from './components/Home.js'
 
 class App extends React.Component {
 
   componentDidMount() {
     this.props.getCurrentUser()
   }
+  
   render(){
     return (
-      <NavBar />
+      <div className="App">
+        <NavBar />,
+        <Home />
+        <Switch>
+          <Route exact path='/signup' component={Signup}/>
+          <Route exact path='/login' component={Login}/>
+        </Switch>
+      </div>
     );
   }
   
@@ -23,4 +35,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { getCurrentUser })(App);
+export default withRouter(connect(mapStateToProps, { getCurrentUser })(App));
