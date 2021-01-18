@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react'
+import {Link} from 'react-router-dom'
 
-export default class CardFront extends Component {
-    render() {
-        return (
-            <div className="card-front"
-            style={{ backgroundImage: `url(${this.props.pic_url})`}}
-            />
-        )
-    }
+export default UserCard = ({ user }) => {
+    return (
+        user ? 
+        <div>
+            <h4>{this.attributes.pic_url}</h4>
+            <p><Link to={`/users/${this.id}`}>See full profile</Link></p>
+        </div>
+    );
 }

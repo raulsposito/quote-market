@@ -6,7 +6,6 @@ import Home from './components/Home.js'
 import Signup from './components/Signup.js'
 import Login from './components/Login'
 import Logout from './components/Logout'
-import Users from './components/Users'
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 import { Route, Switch, withRouter } from 'react-router-dom';
@@ -28,8 +27,8 @@ class App extends React.Component {
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/login' component={Login}/>
           <Route exact path='/logout' component={Logout}/>
-          <Route exact path='/users' component={Users}/>
         </Switch>
+        <Logout />
       </div>
     );
   }
