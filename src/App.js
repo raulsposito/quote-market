@@ -6,6 +6,7 @@ import Home from './components/Home.js'
 import Signup from './components/Signup.js'
 import Login from './components/Login'
 import MainContainer from './components/MainContainer'
+import Footer from './components/Footer'
 
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
@@ -28,6 +29,7 @@ class App extends React.Component {
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/login' component={Login}/>
         </Switch>
+        <Footer/>
       </div>
     );
   }

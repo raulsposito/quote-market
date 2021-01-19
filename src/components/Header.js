@@ -1,8 +1,8 @@
 import React from 'react';
-import header from '../img/header.jpg'
+import Logo from '../img/Logo.png'
 
 const Header = () => {
-    return <img src={header} alt="header" width="758" height="140"></img>
+    return <img src={Logo} alt="header"></img>
 }
 
 export default Header;
