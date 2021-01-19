@@ -1,15 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { createPost } from "../actions/myPosts";
 import { updatePostForm } from '../actions/postForm'
 
-const PostForm = ({ picture, description, budget }) => {
+const PostForm = ({ picture, description, budget, updatePostForm, createPost, userId }) => {
 
     const handleChange = event => {
         const { name, value } = event.target
         updatePostForm(name, value)
     }
 
-    const handleSubmit = event => event.preventDefault()
+    const handleSubmit = event => {
+        event.preventDefault()
+        createPost(picture, description, budget, userId)
+    }
 
     return (
         <form onSubmit={handleSubmit}>
@@ -40,7 +44,8 @@ const mapStateToProps = state => {
     return {
         picture,
         description,
-        budget
+        budget,
+        userId: state.currentUser.id
     }
 }
 
