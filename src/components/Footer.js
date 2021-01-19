@@ -1,8 +1,12 @@
 import React from 'react';
-import FooterImg from '../img/FooterImg.jpg'
 
 const Footer = () => {
-    return <img src={FooterImg} alt="footer"></img>
+    return (
+    <div className="footer">
+        <h2>CUPCAKE & DINO</h2>
+        <h3>GENERAL SERVICES</h3><br/>
+    </div>
+    )
 }
 
 export default Footer;

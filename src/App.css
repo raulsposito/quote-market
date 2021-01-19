@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
 .App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
   text-align: center;
+  background: #fff;
+  font-family: 'Varela Round', sans;
+  justify-content:center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -35,4 +46,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.button {
+  background-color: #940E81;
+  border-radius: 3vh;
+  font-size: 1.7vh;
+  color: #fff;
+  margin: 0 auto;
+  padding: 0.5vh;
+  text-transform: uppercase;
+  width: 25vh;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  text-align: center;
+  background: #FFF18F;
+  font-family: 'Varela Round', sans;
+  justify-content:center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  padding: 8px;
+  color: #555;
+  box-shadow: none;
 }

@@ -11,7 +11,7 @@ const Logout = ({ logout }) => {
         logout()
       }
     }>
-      <input type="submit" value="Log Out"/>
+      <input className="button" type="submit" value="Log Out"/>
     </form>
   )
 }
