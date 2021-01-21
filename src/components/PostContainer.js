@@ -14,7 +14,7 @@ class PostContainer extends React.Component {
         // debugger
         return(
             <div>
-                { this.props.posts.length > 0 ? this.props.posts.map(post => <PostCard post={post}/> ) : <p>Nope!</p>} 
+                { this.props.posts.length > 0 ? this.props.posts.map(post => <PostCard post={post}/>) : <p>Nope!</p>} 
             </div>
         )
     }
