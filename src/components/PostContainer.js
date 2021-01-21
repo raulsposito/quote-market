@@ -10,9 +10,10 @@ class PostContainer extends React.Component {
     }
 
     render() {
+        // debugger
         return(
             <div>
-                { !!this.props.posts ? <PostCard post={this.props.posts}/> : <p>Nope!</p>} 
+                { !!this.props.posts.picture ? <PostCard post={this.props.posts}/> : <p>Nope!</p>} 
             </div>
         )
     }
@@ -20,9 +21,7 @@ class PostContainer extends React.Component {
 
 const mapStateToProps = ( state ) => {
     return {
-        picture: state.picture,
-        description: state.description,
-        budget: state.budget
+        posts: state.posts
     }
 }
 
