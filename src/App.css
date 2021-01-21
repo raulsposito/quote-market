@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 70px;
   justify-content: center;  
   text-align: center;
   background: #fff;
@@ -78,3 +79,13 @@ input {
   color: #555;
   box-shadow: none;
 }
+
+.MainContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 20vh;
+	margin: -20px 0 50px;
+}
+

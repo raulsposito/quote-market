@@ -5,8 +5,8 @@ import Logout from './Logout'
 const MainContainer = () => {
   return (
     <div className="MainContainer">
-        <Link to="/jobs/new">Find a Hero!</Link><br></br>
-        <Link to="/jobs">Be a Hero!</Link>
+        <Link to="/posts/new">Find a Hero!</Link><br></br>
+        <Link to="/posts">Be a Hero!</Link>
         <Logout />
     </div>
   )
