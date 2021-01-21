@@ -6,8 +6,6 @@ import Home from './components/Home.js'
 import Signup from './components/Signup.js'
 import Login from './components/Login'
 import PostsContainer from './components/PostContainer'
-import PostsIndex from './components/PostsIndex'
-import getPosts from './actions/posts'
 import MainContainer from './components/MainContainer'
 import Footer from './components/Footer'
 
