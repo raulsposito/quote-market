@@ -7,13 +7,14 @@ class PostContainer extends React.Component {
 
     componentDidMount() {
         this.props.getPosts()
+        // debugger
     }
 
     render() {
         // debugger
         return(
             <div>
-                { !!this.props.posts.picture ? <PostCard post={this.props.posts}/> : <p>Nope!</p>} 
+                { this.props.posts.length > 0 ? this.props.posts.map(post => <PostCard post={post}/> ) : <p>Nope!</p>} 
             </div>
         )
     }
@@ -25,4 +26,4 @@ const mapStateToProps = ( state ) => {
     }
 }
 
-export default connect(mapStateToProps, {getPosts})(PostContainer)
+export default connect(mapStateToProps, { getPosts })(PostContainer)

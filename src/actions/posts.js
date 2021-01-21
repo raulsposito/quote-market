@@ -24,7 +24,7 @@ export const getPosts = () => {
             if (response.error) {
                 alert(response.error)
             } else {
-                dispatch(setPosts(response.data))
+                dispatch(setPosts(response))
             }
         })
         .catch(console.log)
