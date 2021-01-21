@@ -6,8 +6,8 @@ const PostCard = ({ post }) => {
     return (
         post ?
         <div>
-            <div className="pic">
-                <img src={post.picture} alt="post picture" />
+            <div>
+                <img className="pic" src={post.picture} alt="post picture" />
             </div>
             <p>{post.description}</p>
             <p>Hourly pay:{post.budget}</p>
