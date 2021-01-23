@@ -7,7 +7,7 @@ import Signup from './components/Signup.js'
 import Login from './components/Login'
 import PostsContainer from './components/PostContainer'
 import SinglePost from './components/SinglePost'
-import PostInput from './components/PostInput'
+import NewPostForm from './components/NewPostForm'
 import MainContainer from './components/MainContainer'
 import Footer from './components/Footer'
 
@@ -33,8 +33,8 @@ class App extends React.Component {
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/login' component={Login}/>
           <Route exact path='/posts' component={PostsContainer}/>
+          <Route exact path='/posts/new' component={NewPostForm}/>
           <Route exact path='/posts/:id' component={SinglePost}/>
-          <Route exact path='/posts/new' component={PostInput}/>
         </Switch>
         <Footer/>
       </div>

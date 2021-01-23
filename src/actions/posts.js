@@ -1,4 +1,4 @@
-import { resetPostForm } from './postForm'
+import { resetNewPostForm } from './newPostForm'
 
 export const setPosts = posts => {
   return {
@@ -58,13 +58,13 @@ export const getPosts = () => {
     }
 }
 
-export const createPost = (postData, history) => {
+export const createPost = (picture, description, budget, history) => {
   return dispatch => {
     const sendablePostData = {
-      picture: postData.picture,
-      description: postData.description,
-      budget: postData.budget,
-      user_id: postData.userId
+      picture: picture,
+      description: description,
+      budget: budget,
+      user_id: userId
     }
     return fetch("http://localhost:3000/api/v1/posts", {
       credentials: "include",
@@ -80,7 +80,7 @@ export const createPost = (postData, history) => {
           alert(resp.error)
         } else {
           dispatch(addPost(resp.data))
-          dispatch(resetPostForm())
+          dispatch(resetNewPostForm())
           history.push(`/posts/${resp.data.id}`)
         }
       })
