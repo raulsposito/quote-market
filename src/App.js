@@ -25,19 +25,21 @@ class App extends React.Component {
   render(){
     const { loggedIn } = this.props
     return (
-      <div className="App">
+      <div className="all">
         <Header />
-        { loggedIn ? <MainContainer /> : "" }
-        { loggedIn ? <NavBar /> : <Home /> }
-        <Switch>
-          <Route exact path='/signup' component={Signup}/>
-          <Route exact path='/login' component={Login}/>
-          <Route exact path='/posts' component={PostsContainer}/>
-          <Route exact path='/posts/new' component={NewPostForm}/>
-          <Route exact path='/posts/:id' component={SinglePost}/>
-        </Switch>
-        <Footer/>
-        { loggedIn ? <Logout /> : "" }
+        <div className="App">
+          { loggedIn ? <MainContainer /> : "" }
+          { loggedIn ? <NavBar /> : <Home /> }
+          <Switch>
+            <Route exact path='/signup' component={Signup}/>
+            <Route exact path='/login' component={Login}/>
+            <Route exact path='/posts' component={PostsContainer}/>
+            <Route exact path='/posts/new' component={NewPostForm}/>
+            <Route exact path='/posts/:id' component={SinglePost}/>
+          </Switch>
+          <Footer/>
+          { loggedIn ? <Logout /> : "" }
+        </div>
       </div>
     );
   }

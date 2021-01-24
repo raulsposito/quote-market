@@ -2,16 +2,29 @@
 
 .App {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70px;
   justify-content: center;  
   text-align: center;
-  background: #fff;
   font-family: 'Varela Round', sans;
   justify-content:center;
   overflow: hidden;
+
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  text-align: center;
+  font-family: 'Varela Round', sans;
+  justify-content:center;
+  overflow: hidden;
+  background-image: url(/home/raulsposito/code/labs/react-project/quote-market-client/quote-market/src/img/wp4050474.jpg);
+  background-size: auto;
 }
 
 .App-logo {
@@ -96,6 +109,35 @@ input {
 	padding-right:5px;
 	padding-top:5px;
 	padding-bottom:5px;
-  width: 150px;
-  height: 150px;
+
+  min-height: 20rem; /* layout hack */
+	background: #fff center center no-repeat;
+	background-size: cover; 
 }
+
+.pic:hover {
+  transform: scale(1.05 );
+}
+
+.post-card {
+  margin: 1rem;
+  box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+#find {
+  background-color: #fff;
+  font-family: 'Varela Round', sans;
+
+}
+
+#be {
+  background-color: #fff;
+  font-family: 'Varela Round', sans;
+}
+
+a {
+  font-family: 'Varela Round', sans;
+  
+}
+

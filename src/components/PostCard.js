@@ -5,7 +5,7 @@ const PostCard = ({ post }) => {
     // debugger
     return (
         post ?
-        <div>
+        <div className="post-card">
             <div>
                 <img className="pic" src={post.picture} alt="post picture" />
             </div>
