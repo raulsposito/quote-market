@@ -49,6 +49,13 @@ code {
   background-color: #fff;
 }
 
+.post-feed {
+  overflow: scroll;
+  
+  overflow-x: hidden;
+  height: 270px;
+}
+
 
 
 #movie-showcase {
