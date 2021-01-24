@@ -5,13 +5,14 @@ import { createPost } from '../actions/posts'
 
 const NewPostForm = ({ picture, description, budget, history, updateNewPostForm, createPost }) => {
     
-    const handleChange= event => {
+    const handleChange = event => {
         const { name, value } = event.target
         updateNewPostForm(name, value)
     }
 
     const handleSubmit = ( event, picture, description, budget ) => {
         event.preventDefault()
+        debugger
         createPost({picture, description, budget})
     }
 

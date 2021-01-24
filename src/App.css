@@ -57,7 +57,7 @@
   margin: 0 auto;
   padding: 0.5vh;
   text-transform: uppercase;
-  width: 25vh;
+  width: 28vh;
 }
 
 input {
@@ -85,8 +85,9 @@ input {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	height: 20vh;
-	margin: -20px 0 50px;
+	height: 10vh;
+	margin: -20px 0 10px;
+
 }
 
 .pic {

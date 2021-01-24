@@ -22,6 +22,8 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .column {
@@ -39,7 +41,13 @@ code {
 }
 
 
+#find {
+  background-color: #fff;
+}
 
+#be {
+  background-color: #fff;
+}
 
 
 

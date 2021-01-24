@@ -5,12 +5,12 @@ import Header from "./components/Header"
 import Home from './components/Home.js'
 import Signup from './components/Signup.js'
 import Login from './components/Login'
+import Logout from './components/Logout'
 import PostsContainer from './components/PostContainer'
 import SinglePost from './components/SinglePost'
 import NewPostForm from './components/NewPostForm'
 import MainContainer from './components/MainContainer'
 import Footer from './components/Footer'
-
 import { connect } from 'react-redux'
 import { getCurrentUser } from "./actions/currentUser.js"
 
@@ -27,8 +27,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <NavBar />
-        { loggedIn ? <MainContainer /> : <Home /> }
+        { loggedIn ? <MainContainer /> : "" }
+        { loggedIn ? <NavBar /> : <Home /> }
         <Switch>
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/login' component={Login}/>
@@ -37,6 +37,7 @@ class App extends React.Component {
           <Route exact path='/posts/:id' component={SinglePost}/>
         </Switch>
         <Footer/>
+        { loggedIn ? <Logout /> : "" }
       </div>
     );
   }
