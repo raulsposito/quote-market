@@ -1,18 +1,28 @@
-import React from 'react'
+
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import noPost from '../img/NoPost.png'
 
-const SinglePost = props => {
+class SinglePost extends Component {
+  render(post) {
+    
+    return (
+      post ?
+      <section>
+        <article className="post">
+          <img height="200px" width="200px" src={this.posts.picture}></img>
+          <p className="post-content">{this.posts.description}</p>
+          <p>{this.posts.budget}</p>
+        </article>
+      </section>
+      : <div>
+          <img height="200px" width="200px" src={noPost} alt="Sorry, couldn't load!" ></img>
+          <p>"Sorry, couldn't load!"</p>
+        </div>
+    )
+    
+  }
 
-  return (
-    <section>
-      <article className="post">
-        <h2>{props.posts.picture}</h2>
-        <p className="post-content">{props.posts.description}</p>
-        <p>{props.posts.budget}</p>
-      </article>
-    </section>
-  )
-  
 }
 
 const mapStateToProps = state => {

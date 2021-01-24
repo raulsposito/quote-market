@@ -14,6 +14,9 @@
 
 }
 
+.navbar {
+  width: 100%;
+}
 .all {
   display: flex;
   flex-direction: column;
@@ -86,7 +89,8 @@ input {
   margin-bottom: 15px;
   outline: none;
   border-radius: 8px;
-  border: none;
+  border-color: #FFE202;
+  border-style:double;
   font-size: 1em;
   padding: 8px;
   color: #555;
@@ -126,18 +130,38 @@ input {
 }
 
 #find {
-  background-color: #fff;
+  background-color: transparent;
   font-family: 'Varela Round', sans;
-
+  background-image: url(/home/raulsposito/code/labs/react-project/quote-market-client/quote-market/src/img/Find.png);
+  height: 60px;
+  text-align: center;
+  justify-content: center;
 }
 
 #be {
-  background-color: #fff;
+  background-color: transparent;
   font-family: 'Varela Round', sans;
+  background-image: url(/home/raulsposito/code/labs/react-project/quote-market-client/quote-market/src/img/Be.png);
+  height: 60px;
+  text-align: center;
+  justify-content: center;
+}
+
+p {
+  font-family: 'Varela Round', sans;
+  color: #940E81;
+  font-weight: 600;
+}
+
+p:hover {
+  transform: scale(1.05 );
 }
 
 a {
   font-family: 'Varela Round', sans;
-  
+  font-weight: 600;
 }
 
+a:hover {
+  transform: scale(1.05 );
+}

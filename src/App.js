@@ -37,8 +37,8 @@ class App extends React.Component {
             <Route exact path='/posts/new' component={NewPostForm}/>
             <Route exact path='/posts/:id' component={SinglePost}/>
           </Switch>
-          <Footer/>
           { loggedIn ? <Logout /> : "" }
+          <Footer/>
         </div>
       </div>
     );
