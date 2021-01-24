@@ -12,11 +12,6 @@ code {
   height: 100%;
 }
 
-.home {
-  margin: 15px;
-  background-color: blue;
-}
-
 .row {
   display: flex;
   flex-direction: row;
