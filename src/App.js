@@ -7,6 +7,7 @@ import Signup from './components/Signup.js'
 import Login from './components/Login'
 import Logout from './components/Logout'
 import PostsContainer from './components/PostContainer'
+import UsersContainer from './components/UsersContainer'
 import SinglePost from './components/SinglePost'
 import NewPostForm from './components/NewPostForm'
 import MainContainer from './components/MainContainer'
@@ -36,6 +37,7 @@ class App extends React.Component {
             <Route exact path='/posts' component={PostsContainer}/>
             <Route exact path='/posts/new' component={NewPostForm}/>
             <Route exact path='/posts/:id' component={SinglePost}/>
+            <Route exact path='/users' />
           </Switch>
           { loggedIn ? <Logout /> : "" }
           <Footer/>
