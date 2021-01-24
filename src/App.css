@@ -138,6 +138,10 @@ input {
   justify-content: center;
 }
 
+#find:hover {
+  transform: scale(1.05 );
+}
+
 #be {
   background-color: transparent;
   font-family: 'Varela Round', sans;
@@ -145,6 +149,10 @@ input {
   height: 60px;
   text-align: center;
   justify-content: center;
+}
+
+#be:hover {
+  transform: scale(1.05 );
 }
 
 p {
