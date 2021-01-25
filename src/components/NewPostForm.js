@@ -3,7 +3,7 @@ import { updateNewPostForm } from '../actions/newPostForm'
 import { connect } from 'react-redux'
 import { createPost } from '../actions/posts'
 
-const NewPostForm = ({ picture, description, budget, history, updateNewPostForm, createPost }) => {
+const NewPostForm = ({ picture, description, budget, history, updateNewPostForm, createPost, userId }) => {
     
     const handleChange = event => {
         const { name, value } = event.target
@@ -12,8 +12,7 @@ const NewPostForm = ({ picture, description, budget, history, updateNewPostForm,
 
     const handleSubmit = ( event, picture, description, budget ) => {
         event.preventDefault()
-        debugger
-        createPost({picture, description, budget})
+        createPost(picture, description, budget)
     }
 
     return(
@@ -44,12 +43,14 @@ const NewPostForm = ({ picture, description, budget, history, updateNewPostForm,
 }
 
 const mapStateToProps = state => {
+    const userId = state.currentUser ? state.currentUser.id : ""
     const { picture, description, budget } = state.newPostForm 
     return {
         picture,
         description,
-        budget
+        budget,
+        userId
     }
 }
 
-export default connect(mapStateToProps, { updateNewPostForm })(NewPostForm);
+export default connect(mapStateToProps, { updateNewPostForm, createPost })(NewPostForm);

@@ -58,7 +58,7 @@ export const getPosts = () => {
     }
 }
 
-export const createPost = (picture, description, budget, history) => {
+export const createPost = (picture, description, budget, history, userId ) => {
   return dispatch => {
     const sendablePostData = {
       picture: picture,
