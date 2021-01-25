@@ -47,4 +47,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, { updateNewQuoteForm })(QuoteForm)
+export default connect(mapStateToProps, { updateNewQuoteForm, quote })(QuoteForm)

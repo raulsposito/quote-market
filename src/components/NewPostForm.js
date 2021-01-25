@@ -3,16 +3,16 @@ import { updateNewPostForm } from '../actions/newPostForm'
 import { connect } from 'react-redux'
 import { createPost } from '../actions/posts'
 
-const NewPostForm = ({ picture, description, budget, history, updateNewPostForm, createPost, userId }) => {
+const NewPostForm = ({ picture, description, budget, history, updateNewPostForm, createPost }) => {
     
     const handleChange = event => {
         const { name, value } = event.target
         updateNewPostForm(name, value)
     }
 
-    const handleSubmit = ( event, picture, description, budget ) => {
+    const handleSubmit = ( event, picture, description, budget, userId ) => {
         event.preventDefault()
-        createPost(picture, description, budget)
+        createPost(picture, description, budget, userId)
     }
 
     return(

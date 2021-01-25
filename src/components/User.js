@@ -12,7 +12,6 @@ class User extends React.Component {
             count: newCount
         })
     }
-    
     render() {
         return (
             <div className="card">
