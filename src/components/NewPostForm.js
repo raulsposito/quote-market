@@ -17,16 +17,19 @@ const NewPostForm = ({ picture, description, budget, history, updateNewPostForm,
 
     return(
     <form onSubmit={handleSubmit} >
+        <p><label>Pic Url</label></p>
         <input
         placeholder="pic url"
         name="picture"
         onChange={handleChange}
         value={picture} /><br></br>
+        <p><label>Description</label></p>
         <input
         placeholder="description"
         name="description"
         onChange={handleChange}
         value={description} /><br></br>
+        <p><label>Budget</label></p>
         <input
         placeholder="budget"
         name="budget"

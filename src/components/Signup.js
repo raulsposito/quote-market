@@ -21,9 +21,13 @@ const Signup = ({ signupFormData, updateSignupForm, signup, history }) => {
 
   return (
     <form className="input" onSubmit={handleSubmit}>
+      <p><label>Name</label></p>
       <input placeholder="name" value={signupFormData.name} name="name" type="text" onChange={handleUserInfoInputChange} />
+      <p><label>Email</label></p>
       <input placeholder="email" value={signupFormData.email} name="email" type="text" onChange={handleUserInfoInputChange} />
+      <p><label>Password</label></p>
       <input placeholder="password" value={signupFormData.password} name="password" type="text" onChange={handleUserInfoInputChange} />
+      <p><label>Pic_url</label></p>
       <input placeholder="pic_url" value={signupFormData.pic_url} name="pic_url" type="text" onChange={handleUserInfoInputChange} />
       <input className="button" type="submit" value="Sign Up"/>
     </form>

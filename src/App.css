@@ -147,6 +147,7 @@ input {
   font-family: 'Varela Round', sans;
   background-image: url(/home/raulsposito/code/labs/react-project/quote-market-client/quote-market/src/img/Find.png);
   background-repeat: no-repeat;
+  background-position: right;
   width: 100%;
   background-color: #FEE105;
   height: 60px;
@@ -166,6 +167,7 @@ input {
   font-family: 'Varela Round', sans;
   background-image: url(/home/raulsposito/code/labs/react-project/quote-market-client/quote-market/src/img/Be.png);
   background-repeat: no-repeat;
+  background-position: left;
   width: 100%;
   background-color: #FC17FA;
   height: 60px;
