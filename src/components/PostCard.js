@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import QuoteForm from './QuoteForm'
 
 class PostCard extends Component{
-    // debugger
 
     state = {
         currentCount: 0,
@@ -35,7 +34,7 @@ class PostCard extends Component{
                 <p>Hourly pay:{post.budget}</p>
                 <Link to={`/posts/${post.id}`}>See this post!</Link>
                 
-                <button onClick={this.incrementCounter}>Rating: {this.state.currentCount}</button>
+                <p><button className="button" onClick={this.incrementCounter}>Likes: {this.state.currentCount}</button></p>
                 <QuoteForm />
             </div> :
             <p>No help needed here!</p>
