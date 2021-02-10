@@ -21,12 +21,14 @@ const QuoteForm = ( quoteFormData ) => {
     }
 
     return(
-        <form onSubmit={handleSubmit} >
-            <input 
+        <form className="input" onSubmit={handleSubmit} >
+            <p><label>Reward:</label></p>
+            <input
             placeholder="Reward"
             name="price"
             onChange={handleChange}
             value={quoteFormData.price} /><br></br>
+            <p><label>Comment:</label></p>
             <input 
             placeholder="Comment"
             name="comment"
